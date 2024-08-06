@@ -12,4 +12,5 @@ if not os.path.exists(output_dir):
    os.mkdir(output_dir)
 
 df = pd.DataFrame({'col1': text})
-df.to_csv(os.path.join(output_dir, "output.csv"), sep=',', index=False, encoding='utf-8')
+df.to_csv(os.path.join(output_dir, "output.csv"), index=False)
+print(df)
