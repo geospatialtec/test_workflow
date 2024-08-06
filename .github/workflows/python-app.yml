@@ -30,7 +30,7 @@ jobs:
         #pip install flake8 pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Run python script
-      run: process.py
+      run: python process.py
     - name: Commit and push changes
       run: |
           git config user.name github-actions
