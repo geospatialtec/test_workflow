@@ -13,4 +13,4 @@ if not os.path.exists(output_dir):
 
 df = pd.DataFrame({'col1': text})
 df.to_csv(os.path.join(output_dir, "output.csv"), index=False)
-print(df)
+#print(df)
