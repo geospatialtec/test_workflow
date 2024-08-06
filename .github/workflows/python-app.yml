@@ -32,9 +32,9 @@ jobs:
     - name: Run python script
       run: python process.py
     - name: Check if there are any changes
-        id: verify_diff
-        run: |
-          git diff --quiet . || echo "changed=true" >> $GITHUB_OUTPUT
+      id: verify_diff
+      run: |
+        git diff --quiet . || echo "changed=true" >> $GITHUB_OUTPUT
     - name: Commit and push changes
       if: steps.verify_diff.outputs.changed == 'true'
       run: |
